@@ -1,0 +1,20 @@
+task_lead_capture:
+  description: >
+    Procure por possíveis 60 clientes analisando a atividade nas redes sociais (Instagram) de usuárias interessadas em fitness, moda praia e tendências de estilo de vida. Elas devem morar em Caratinga/MG e cidades próximas a Caratinga/MG, e ter entre 20 e 50 anos.
+  expected_output: >
+    Gere um arquivo em formato .html com tailwindcss, em português PT-BR, com uma lista de 60 clientes potenciais. O relatório deve focar em clientes com presença significativa nas redes sociais (300+ seguidores, 200+ postagens), excluindo empresas e evitando perfis já incluídos em outras tarefas. Inclua informações relevantes, como nome de usuário, nome completo, URL do Instagram (formatado como link clicável), interesses, cidade de origem e onde mora.
+  agent: agent_searcher_on_internet
+
+task_refine_profiles:
+  description: >
+    Filtrar a lista de perfis encontrados pelo Agente Minerador de Perfis, excluindo aqueles que já seguem Filó Beach e Filó Lingerie, mas tentando ao máximo manter a lista de 60 clientes. Aplicar critérios demográficos, ou seja, morar em Caratinga/MG e cidades próximas a Caratinga/MG, e de interesses específicos já citados, e devem ser mulheres brasileiras entre 30 e 50 anos, interessadas em saúde, beleza, moda casual e esportiva, estilo de vida fitness e bem-estar emocional. Os perfis devem apresentar positividade corporal, autocuidado e ter interesses em moda praia, fitness, bem-estar, moda íntima e estilo de vida saudável.
+  expected_output: >
+    Refinar e gerar um arquivo em formato .html com tailwindcss, em português PT-BR, com uma lista de 60 de perfis encontrados pelo Agente Minerador de Perfis para obter uma lista segmentada de clientes potenciais. A lista deve conter apenas perfis com mais de 300 seguidores, que seguem mais de 100 contas, possuem mais de 200 postagens ativas, e apresentem o máximo de informações de contato possíveis para uso pelo Gerador de Conteúdo.
+  agent: agent_focus_on_target
+
+task_new_customer:
+  description: >
+    Baseado no que foi encontrado pelo Agente Foco em Perfil, identificar pessoas que vivem em Caratinga/MG e cidades próximas a Caratinga/MG e que publicam sobre moda, fitness e estilo de vida no Instagram, mas que ainda não são clientes da Filó. Aplicar filtros para segmentar perfis relevantes e autênticos, focando em usuários com uma presença significativa nas redes sociais.
+  expected_output: >
+    Gere um relatório em formato .html com tailwindcss, em português PT-BR, com uma lista de 60 novos potenciais clientes individuais com presença significativa nas redes sociais (300+ seguidores, 200+ postagens), excluindo empresas e que não estejam incluídos em outras tarefas. Inclua informações sobre seus interesses e postagens, juntamente com nome de usuário, URL do Instagram (formatado como um link clicável), interesses e cidade de origem e uma possível mensagem a enviar para este cliente, que deve ser clicável para já clicar e abrir o instagram mandando a mensagem para o cliente, deve ser informável e divertida.
+  agent: agent_generator

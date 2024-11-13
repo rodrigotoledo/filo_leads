@@ -1,0 +1,10 @@
+.env
+__pycache__/
+daily_report.md
+daily_report.html
+*.html
+customer_reactivation_task.md
+task_lead_capture.md
+tarefa_potenciais_clientes.md
+*.DS_Store
+*.md
